@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Kamera</title>
+   
+</head>
+
+<body>
+
+  <div id="divhome" class="page active">
+    <h1>Tässä kotisivu</h1>
+    <button id="naytakamera">Kamera esiin</button>
+    <button id="naytasijainti">Näytä sijaintisivu</button>
+    <button id="naytavalo">Näytä valosensori</button>
+  </div>
+
+  <div class="page" id="sijaintidiv">
+    <h1>Heippa, tämä sivu paikantaa koordinaattisi</h1>
+    
+    <button onclick="starttaa()">Näytä koordinaattini</button>
+    <button id="naytabtn" onclick="naytaKartalla()" hidden>Näytä kartalla</button>
+    <button id="suljesijainti">Sulje sijaintisivu</button>
+
+    
+  </div>
+  <div class="page" id="valodiv">
+   
+    <h1>Heippa, tämä sivu mittaa valaistusta</h1>
+    <h2 id="info"></h2>
+    <button onclick="lightsensor()">Käynnistä valosensori</button>
+    <button id="suljevalo">Sulje valosivu</button>
+
+    
+  </div>
+
+
+
+  <main id="kamera">
+    <div class="page" id="kameradiv">
+      <button id="kaynnistakamera" onclick="cameraStarttaa()">Käynnistä kamera</button>
+     <button id="sulje">Sulje kamera</button>
+<canvas id="kameracanvas" hidden></canvas>
+<video id="kamerakuva" autoplay></video>
+<img src="//0:" id="kuvasijainti">
+<button id="laukaisin">Ota kuva</button>
+
+
+
+</div>
+
+  </main>
+  <script src="camera.js"></script>
+  <script src="lightsensor.js"></script>
+  <script src="location.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
